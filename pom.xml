@@ -18,7 +18,6 @@
 		<java.version>17</java.version>
 		<flyway.user>postgres</flyway.user>
 		<flyway.password>1234567</flyway.password>
-		<flyway.schemas>flyway</flyway.schemas>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -74,12 +73,7 @@
 					<url>jdbc:postgresql://localhost:5433/flyway</url>
 					<user>postgres</user>
 					<password>1234567</password>
-					<schemas>
-						<schema>public</schema>
-					</schemas>
-					<locations>
-						<location>filesystem:src/main/resources/db/migration</location>
-					</locations>
+					<cleanDisabled>false</cleanDisabled>
 				</configuration>
 			</plugin>
 		</plugins>
